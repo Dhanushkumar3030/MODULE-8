@@ -1,4 +1,4 @@
-# 🎓 Hackerrank:Python Program to Find Students with the Second Lowest Grade
+**# 🎓 Hackerrank:Python Program to Find Students with the Second Lowest Grade
 
 This program reads student names and their corresponding grades, identifies the **second lowest grade**, and prints the names of all students who have that grade in **alphabetical order**.
 
@@ -26,28 +26,34 @@ To write a Python program to:
 ---
 
 ## 💻  Program
-```
-n = int(input())
-records = []
-
-for i in range(n):
+~~~
+l1=[]
+l2=[]
+for _ in range(int(input())):
     name = input()
-    grade = float(input())
-    records.append([name, grade])
-
-grades = sorted({grade for name, grade in records})
-second_lowest = grades[1]
-
-names = [name for name, grade in records if grade == second_lowest]
-names.sort()
-
-for name in names:
-    print(name)
-```
+    score = float(input())
+    l1.extend([name,score])
+    l2.append(l1)
+    l1=[]
+l3=[]
+l4=[]
+for i in l2:
+    l3.append(i[1])
+l3.sort()
+for i in l2:
+    if i[1]==l3[1]:
+        l4.append(i[0])
+l4.sort()
+for i in l4:
+    print(i)
+~~~
 
 ## Output
-![image](https://github.com/user-attachments/assets/50920bca-3294-4de3-a44d-ad6571ae106c)
+<img width="347" height="402" alt="image" src="https://github.com/user-attachments/assets/09759c1e-01ad-4562-9102-d958d881a5ea" />
+
 
 ## Result
-Thus, the program is verified successfully.
+Thus the output is verified.
 
+
+**
